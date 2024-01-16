@@ -14,8 +14,8 @@ A simplified replica of the popular music streaming platform, Spotify.
 
 # Setup and Usage
 1. Clone the repository to your local machine
-   git clone 
-   cd spotify-replica
+   - git clone 
+   - cd spotify-replica
 
 2. Open index.html in your web browser to explore the Spotify Replica interface.
 
