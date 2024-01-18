@@ -44,7 +44,6 @@ let songs =[
 
 songItems.forEach((element, i) => {
     element.getElementsByTagName("img")[0].src = songs[i].coverPath;
-    // element.getElementsByClassName("songName")[0].innerText = songs[i].coverPath;
 });
 
 
@@ -79,7 +78,7 @@ myProgressBar.addEventListener('change', ()=>{
 })
 
 
-const makeAllPlays = () =>{
+const makeAllPlays = () => {
     Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>{
         element.classList.remove('fa-pause-circle');
         element.classList.add('fa-play-circle');
@@ -103,7 +102,8 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
 
 
 document.getElementById('next').addEventListener('click', () => {
-    updatePlayIcon(songIndex, false); // Update the current songItemPlay icon
+    // Update the current songItemPlay icon
+    updatePlayIcon(songIndex, false); 
     if (songIndex >= 9) 
     {
         songIndex = 0;
@@ -112,7 +112,8 @@ document.getElementById('next').addEventListener('click', () => {
     {
         songIndex += 1;
     }
-    updatePlayIcon(songIndex, true); // Update the next songItemPlay icon
+    // Update the next songItemPlay icon
+    updatePlayIcon(songIndex, true); 
     audioElement.src = `songs/${songIndex + 1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
@@ -122,7 +123,8 @@ document.getElementById('next').addEventListener('click', () => {
 });
 
 document.getElementById('previous').addEventListener('click', () => {
-    updatePlayIcon(songIndex, false); // Update the current songItemPlay icon
+    // Update the current songItemPlay icon
+    updatePlayIcon(songIndex, false); 
     if (songIndex <= 0) 
     {
         songIndex = 9;
@@ -131,7 +133,8 @@ document.getElementById('previous').addEventListener('click', () => {
     {
         songIndex -= 1;
     }
-    updatePlayIcon(songIndex, true); // Update the previous songItemPlay icon
+    // Update the previous songItemPlay icon
+    updatePlayIcon(songIndex, true); 
     audioElement.src = `songs/${songIndex + 1}.mp3`;
     masterSongName.innerText = songs[songIndex].songName;
     audioElement.currentTime = 0;
