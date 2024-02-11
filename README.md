@@ -11,6 +11,7 @@ A simplified replica of the popular music streaming platform, Spotify.
 - HTML5, CSS3
 - JavaScript (Vanilla)
 - FontAwesome for icons
+- Google Fonts 
 
 # Setup and Usage
 1. Clone the repository to your local machine
